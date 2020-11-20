@@ -1081,7 +1081,7 @@ sub Info2Global {
             } else {
                 $line_ref->{"key"} = "GRUB_TERMINAL";
                 if ($terminal =~ m/^(serial|console|gfxterm)$/) {
-                    $line_ref->{"value"} = "$terminal" if "$terminal" ne "";
+                    $line_ref->{"value"} = "\"$terminal\"" if "$terminal" ne "";
                 }
                 $terminal = "";
             }
